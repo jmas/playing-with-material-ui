@@ -19,6 +19,7 @@ const config = {
         path: buildPath, // Path of output file
         filename: 'app.js',
     },
+    devtool: 'source-map',
     plugins: [
         // Enables Hot Modules Replacement
         new webpack.HotModuleReplacementPlugin(),
@@ -32,7 +33,7 @@ const config = {
             {
                 // React-hot loader and
                 test: /\.(js|jsx)$/, // All .js files
-                loaders: ['babel-loader?sourceMap'], // react-hot is like browser sync and babel loads jsx and es6-7
+                loaders: ['babel-loader'], // react-hot is like browser sync and babel loads jsx and es6-7
                 exclude: [nodeModulesPath],
             },
         ],

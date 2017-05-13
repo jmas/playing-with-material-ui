@@ -3,6 +3,8 @@ import {deepOrange500} from 'material-ui/styles/colors';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
+import Drawer from 'material-ui/Drawer';
+import MenuItem from 'material-ui/MenuItem';
 import {
     HashRouter as Router,
     Route
@@ -25,6 +27,10 @@ export default () => (
                     title="Title"
                     iconClassNameRight="muidocs-icon-navigation-expand-more"
                 />
+                <Drawer open={ true } docked={ true }>
+                    <MenuItem>Menu Item</MenuItem>
+                    <MenuItem>Menu Item 2</MenuItem>
+                </Drawer>
                 <Route exact path="/" component={ loadComponent('Home') }/>
                 <Route path="/settings" component={ loadComponent('Settings') }/>
             </div>
